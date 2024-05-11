@@ -1,0 +1,158 @@
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+	--light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 325px;
+  height: 100vh;
+  background-color: var(--green);
+}
+
+.top {
+  display: flex;
+  margin: 30px 5px 30px 20px;
+  gap: 140px;
+}
+
+.top .menu {
+  cursor: pointer;
+} 
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navigation img {
+  font-size: 25px;
+}
+
+.navigation span {
+  font-size: 15px;
+}
+
+.navigation button {
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0px 12px 0px 12px;
+  gap: 10px;
+  padding: 15px;
+  background-color: var(--green);
+}
+
+.navigation button:hover {
+  background-color: var(--light-green);
+  border: 0px solid var(--light-green);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.navigation .search {
+  background-color: var(--light-green);
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background-color: var(--light-green);
+}
+
+.baseboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 278px;
+  height: 70px;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  gap: 15px;
+  background-color: var(--light-green);
+}
+
+.baseboard .user-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.baseboard .user-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-content .title {
+  padding-right: 50px;
+  font-size: 15px;
+}
+
+.user-content .bio {
+  font-size: 12px;
+}
+
+.baseboard .logout {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--light-grey);
+}
+
+.content .title {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+/* navbar */
+.main-content.active {
+  width: 78px;
+}
+
+.main-content.active .menu {
+  position: relative;
+  left: -195px;
+}
+
+.main-content.active .name {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.main-content.active .baseboard {
+  width: 78px;
+}
+
+.main-content.active .logout {
+  position: relative;
+  left: -95px;
+}

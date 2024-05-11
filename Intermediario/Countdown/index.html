@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+  <link rel="shortcut icon" href="assets/rocket.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Countdown</title>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/top-image.svg" alt="">
+    <main class="main-content">
+      <aside class="countdown">
+        <h1 class="title">Ready to launch in...</h1>
+        <section class="container-timer">
+          <div class="days">
+            <span>Dias</span>
+            <p id="days">08</p>
+          </div>
+          <span class="dots">:</span>
+          <div class="hours">
+            <span>Horas</span>
+            <p id="hours">12</p>
+          </div>
+          <span class="dots">:</span>
+          <div class="minutes">
+            <span>Minutos</span>
+            <p id="minutes">44</p>
+          </div>
+          <span class="dots">:</span>
+          <div class="seconds">
+            <span>Segundos</span>
+            <p id="seconds">28</p>
+          </div>
+        </section>
+        <p class="bio">Inscreva-se para saber mais sobre o lançamento</p>
+        <button type="button" onclick="openModal()">
+          Inscreva-se
+        </button>
+      </aside>
+      <img class="rocket" src="assets/rocket.svg" alt="">
+    </main>
+    <img src="assets/bottom-image.svg" alt="">
+  </div>
+  <div class="modal-container" id="modal">
+    <main class="modal-content">
+      <section class="form-container">
+        <img src="assets/rocket.svg" alt="">
+        <form class="card-form" action="">
+          <div class="card-top">
+            <h3 class="title">Cadastra-se aqui para acompanhar o lançamento.</h3>
+            <span onclick="closeModal()" class="close">&times;</span>
+          </div>
+          <div class="card-input">
+            <label for="">Nome Completo:</label>
+            <input type="text" placeholder="Digite seu nome">
+            <label for="">E-mail:</label>
+            <input type="email" placeholder="Digite seu email" required maxlength="40">
+          </div>
+          <button type="submit">
+            Enviar
+          </button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

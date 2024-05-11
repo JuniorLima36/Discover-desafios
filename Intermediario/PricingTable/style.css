@@ -1,0 +1,185 @@
+:root {
+  --yellow: #ffcc29;
+  --blue: #1d539e;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  height: 450px;
+  background-color: var(--blue);
+}
+
+.card-top .title {
+  padding: 10px;
+  font-size: 48px;
+  color: var(--page-background);
+}
+
+.card-top .description {
+  width: 560px;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--page-background);
+}
+
+.container-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  gap: 25px;
+}
+
+.card {
+  width: 355px;
+  height: 470px;
+  border-radius: 10px;
+  background-color: var(--page-background);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: scale(1.04);
+  transition: transform 0.05s, box-shadow 0.3s;
+}
+
+.card .title {
+  padding: 30px;
+  font-size: 18px;
+}
+
+.card .value {
+  margin-left: 30px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.card .month {
+  font-size: 20px;
+  color: var(--gray);
+}
+
+.card .description {
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.card hr {
+  width: 285px;
+  margin-top: 15px;
+  margin-left: 30px;
+  opacity: 0.1;
+}
+
+.card-check {
+  height: 136px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.card-check li {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.card-check .image {
+  padding: 10px;
+}
+
+.card-check .bio {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.card button {
+  width: 296px;
+  height: 51px;
+  margin-left: 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: solid 1px var(--blue);
+  background-color: var(--page-background);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.card button a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.card button:hover {
+  background-color: var(--blue);
+  transform: scale(1.08);
+  transition: transform 0.05s, box-shadow 0.3s;
+}
+
+.card button:hover a {
+  color: var(--page-background);
+}
+
+.card-main {
+  width: 355px;
+  height: 490px;
+}
+
+.card-color {
+  display: flex;
+  align-items: center;
+  height: 76px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 15px;
+  background-color: var(--yellow);
+}
+
+.card-color .color-title {
+  padding: 30px;
+  font-size: 18px;
+  color: var(--blue);
+}
+
+.card-color .color-button {
+  width: 94px;
+  height: 32px;
+  margin-left: 110px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--page-background);
+  border: none;
+  background-color: var(--blue);
+}
+
+.card-main .card-check .bio {
+  font-size: 16px;
+  color: var(--gray);
+}
+
+.card-main button {
+  background-color: var(--blue);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.card-main button a {
+  color: var(--page-background);
+}
+
+.card-main button:hover {
+  transform: scale(1.08);
+  transition: transform 0.05s, box-shadow 0.3s;
+}

@@ -1,0 +1,272 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 720px;
+  height: 100vh;
+  background-color: var(--background);
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  width: 600px;
+  margin: 550px;
+  margin-bottom: 1300px;
+}
+
+.form-container {
+  position: fixed;
+}
+
+.card-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 572px;
+  height: 512px;
+  background-color: var(--form-background);
+}
+
+.card-top {
+  width: 334px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+
+.content-top {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.content-top h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: var(--text-title);
+}
+
+.card-top span {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--text-base);
+}
+
+.card-login {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-login label {
+  font-family: "Poppins", sans-serif;
+  font-size: medium 16px;
+  color: var(--text-base);
+}
+
+.card-input {
+  display: flex;
+  align-items: center;
+  width: 335px;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--text-base);
+}
+
+.card-input input {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--text-base);
+  background-color: var(--form-background);
+}
+
+.card-input .eye {
+  cursor: pointer;
+}
+
+::-ms-reveal {
+  display: none; 
+}
+
+.card-input:focus-within {
+  border: 1px solid var(--primary-color);
+  color: var(--text-base);
+}
+
+.card-input:focus-within .locker {
+  content: url(assets/mail-focus.svg);
+}
+
+.card-input:focus-within .password {
+  content: url(assets/lock-focus.svg);
+}
+
+.card-input:focus-within .eye {
+  content: url(assets/eye-closed.svg);
+  width: 25px;
+  height: 20px;
+}
+
+.baseboard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.card-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.check-remember input{
+  display: none;
+}
+
+.check-remember label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--text-base);
+}
+
+.check-remember input + label:before{
+  content: '' ;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+  border: 1px solid var(--text-base);
+}
+
+.check-remember input:checked + label:before{
+  background-color: var(--primary-color);
+  background-image:url(assets/check.svg);
+  background-position: center;
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--text-base);
+}
+
+.card-check .color {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin-left: 10px;
+  color: var(--primary-color);
+}
+
+.baseboard button {
+  width: 334px;
+  height: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.baseboard a {
+  text-decoration: none;
+  color: var(--background);
+}
+
+.record {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+  gap: 10px;
+  color: var(--primary-color);
+}
+
+.record a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.content-image {
+  height: 100vh;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.content-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    position: fixed;
+    width: 378px;
+    height: 812px;
+    margin-top: 50px;
+    box-shadow: none;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 215px;
+    padding-right: 250px;
+  }
+
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-form {
+    background-color: var(--background);
+  }
+
+  .card-input input {
+    background-color: var(--background);
+  }
+
+  .content-image img {
+    visibility: hidden;
+    box-shadow: none;
+  }
+}

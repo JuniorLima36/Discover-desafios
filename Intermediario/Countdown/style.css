@@ -1,0 +1,186 @@
+:root {
+  --black: #4D4C59;
+  --purple: #6C63FF;
+	--light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 100px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 25px;
+}
+
+.countdown .title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.container-timer {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.days, .hours, .minutes, .seconds {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-timer span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--light-grey);
+}
+
+.container-timer p {
+  font-size: 72px;
+  color: var(--black);
+}
+
+.container-timer .dots {
+  font-size: 72px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.countdown .bio {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.countdown button {
+  width: 160px;
+  height: 46px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background-color: var(--purple);
+}
+
+.countdown button:hover {
+  background-color: var(--purple);
+  transform: scale(1.08);
+  transition: transform 0.05s, box-shadow 0.3s;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 803px;
+  height: 308px;
+}
+
+.form-container img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+
+.card-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 450px;
+  margin: 15px;
+}
+
+.card-top {
+  display: flex;
+}
+
+.card-top .title {
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.card-form .close {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.card-input {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  padding-left: 10px;
+}
+
+.card-input label {
+  margin-top: 15px;
+  color: var(--text-color);
+}
+
+.card-input input {
+  padding: 5px;
+}
+
+.card-form button {
+  width: 160px;
+  height: 46px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--purple);
+  color: #ffffff;
+}
+
+.card-form button:hover {
+  background-color: var(--purple);
+  transform: scale(1.08);
+  transition: transform 0.05s, box-shadow 0.3s;
+}

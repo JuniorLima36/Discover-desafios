@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+	--dark: #F1F1F1;
+	--light: #F1F1F1;
+	--label: #111;
+  --title: #111;
+  --bg: url(assets/bg-desktop-light.jpg);
+}
+
+.dark:root {
+	--dark: #292C35;
+	--light: #292C35;
+	--label: #111;
+  --title: #fff;
+  --bg: url(assets/bg-desktop.jpg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg) no-repeat top center/cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+  /* background-color: var(--dark); */
+  transition: background-color 200ms ease-in;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  margin-right: 5px;
+  color: var(--title);
+}
+
+.switch {
+  position: relative;
+  width: 235px;
+  height: 102px;
+  border-radius: 50px;
+  border: none;
+  padding: 8px;
+  background-color: var(--label);
+  transition: all 200ms ease-in;
+}
+
+.switch > img {
+  display: block;
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  margin-left: 5px;
+  padding-bottom: 10px;
+}
+
+.switch > img:nth-child(1) {
+  left: 4px;
+}
+
+.switch > img:nth-child(2) {
+  right: 4px;
+}
+
+.switch > .circle {
+  position: relative;
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  border-radius: 100%;
+  background-color: var(--light);
+  transition: transform 250ms ease-in;
+  transform:  translateX(calc(-100% + 20px));
+}
+
+.switch.active > .circle {
+  transform:  translateX(calc(100% - 20px));
+}

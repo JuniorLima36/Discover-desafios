@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais da página */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e56d0bd1;
+  color: #39393A;
+}
+
+.recipe-container {
+  width: 50%;
+  margin: 40px auto;
+  padding: 27px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+}
+
+/* Estilos para o título da receita */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1B1B1B;
+  text-align: center;
+}
+
+/* Estilos para a imagem da receita */
+.recipe-image {
+  text-align: right;
+  font-size: 12px;
+  color: #8F8F8F;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+/* Estilos para as listas de ingredientes e modo de preparo */
+.recipe-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #1B1B1B;
+  margin-bottom: 10px;
+}
+
+ul, ol {
+  font-size: 16px;
+  color: #39393A;
+  margin-left: 20px;
+}
+
+/* Estilos para a seção de informações adicionais */
+.additional-info {
+  margin-bottom: 20px;
+}
+
+/* Rodapé da página */
+footer {
+  text-align: center;
+  font-size: 15px;
+  color: #39393A;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #39393A;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none;
+}

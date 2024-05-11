@@ -1,0 +1,245 @@
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+  background-color: var(--backgrond);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width:  1385.6px;
+  height: 100vh;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0px;
+  gap: 150px;
+  z-index: 1;
+}
+
+#navigation .logo {
+  width: 230px;
+  height: 50px;
+}
+
+#navigation ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+#navigation li {
+  font-size: 20px;
+  font-weight: medium;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 230px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid var(--button);
+}
+
+button:hover {
+  background-color: var(--button);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content .title {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.content .sub {
+  font-size: 80px;
+  text-shadow: 
+  -1px -1px 0 var(--button), 
+  1px -1px 0 var(--button),
+  -1px 1px 0 var(--button), 
+  1px 1px 0 var(--button);
+  color: var(--backgrond);
+}
+
+.content #coffee {
+  display: flex;
+  align-items: center;
+  height: 590px;
+}
+
+#nav-bar, #nav-menu, #nav-content {
+  display: none;
+}
+
+#background::before {
+  content: '';
+  position: absolute;
+  width: 732px;
+  height: 572px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(assets/blur-1.png);
+  background-repeat: no-repeat;
+}
+
+#background::after {
+  content: '';
+  position: absolute;
+  width: 615px;
+  height: 700px;
+  top: 0;
+  right: 0;
+  background-image: url(assets/blur-2.png);
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow: hidden;
+  }
+
+  #navigation, #background::after {
+    display: none;
+  }
+
+  #background::before {
+    content: '';
+    width: 100%;
+    background-color: url(assets/blur-mobile.png);
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 35px 30px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #nav-button {
+    width: 30px;
+    height: 13px;
+    cursor: pointer;
+    background: url(assets/menu-buguer-open.svg) no-repeat;
+  }
+
+  #nav-button.active {
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+    background: url(assets/menu-buguer-close.svg) no-repeat;
+  }
+
+  #nav-menu.active {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--backgrond);
+  }
+
+  #nav-menu.active ul li {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #nav-menu.active ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 30px;
+    font-size:  18px;
+    transition: 0.2s;
+    color: var(--border-menu-mobile);
+  }
+
+  #nav-menu.active ul li a:hover {
+    font-weight: 800;
+    padding-left: 35px;
+    color: var(--text-color-menu-mobile);
+    border-left: 5px solid var(--button);
+  }
+
+  #nav-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 480px;
+    padding: 80px 5px;
+    gap: 5px;
+  }
+
+  #nav-content .title {
+    text-align: center;
+    padding: 50px 50px;
+    font-size: 30px;
+  }
+
+  #nav-content #coffee-button img {
+    padding-left: 10px;
+  }
+
+  .content .title, .sub:nth-child(3) {
+    font-size: 40px;
+  }
+  
+  .content #coffee {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

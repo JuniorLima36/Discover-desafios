@@ -1,3 +1,20 @@
+// function githubProfile() {
+//   const url = `https://api.github.com/users/juniorlima36`
+
+//   fetch(url)
+//     .then(res => res.json())
+//     .then(data => {
+//       userName.textContent = data.login
+//       avatar.src = data.avatar_url
+//       followers.textContent = data.followers + " Seguidores"
+//       followings.textContent = data.following + " Seguindo"
+//       repository.textContent = data.public_repos + " Repositórios"
+//       company.textContent = data.company === null ? '@Rocketseat' : data.company
+//       locations.textContent = data.location
+//     })
+// }
+// githubProfile()
+
 document.addEventListener('DOMContentLoaded', function() {
   const userForm = document.getElementById('card-login');
   const usernameInput = document.getElementById('username');
@@ -8,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (username) {
       fetch(`https://api.github.com/users/${username}`)
-        .then(res => res.json())
+        .then(response => response.json())
         .then(data => {
-          if (data.message !== 'Not Found') {
+          if (data.message !== "Not Found") {
             userName.textContent = data.login;
             avatar.src = data.avatar_url;
-            followers.textContent = data.followers + ' Seguidores';
-            followings.textContent = data.following + ' Seguindo';
-            repository.textContent = data.public_repos + ' Repositórios';
+            followers.textContent = data.followers + " Seguidores";
+            followings.textContent = data.following + " Seguindo";
+            repository.textContent = data.public_repos + " Repositórios";
             company.textContent = data.company === null ? '@Rocketseat' : data.company;
             locations.textContent = data.location === null ? 'País' : data.location;
           } else {
@@ -34,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function message() {
-  var notification = document.getElementById('notification-user');
-  notification.style.display = 'block';
+  var notification = document.getElementById("message");
+  notification.style.display = "block";
   
   setTimeout(function() {
-    notification.style.display = 'none';
+    notification.style.display = "none";
   }, 2500);
 }
 
@@ -71,44 +88,44 @@ document.querySelector('#white').addEventListener('click', () => {
 })
 
 async function downloadCard() {
-  document.querySelectorAll('canvas').forEach((canvas) => canvas.remove());
+  document.querySelectorAll("canvas").forEach((canvas) => canvas.remove());
 
-  html2canvas(document.querySelector('#card'), {
+  html2canvas(document.querySelector("#card"), {
     backgroundColor: null,
     allowTaint: false,
     useCORS: true,
   }).then((canvas) => {
-    const image = canvas.toDataURL('image/png');
-    const link = document.createElement('a');
-    link.href = image;
-    link.download = 'RocketCard.png';
+    const imagem = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = imagem;
+    link.download = "cartao.png";
     link.click();
 
   }).catch((erro) => {
-    console.error('Erro ao capturar o card:', erro);
+    console.error("Erro ao capturar o cartão:", erro);
   });
 }
 
 function clipBoard() {
-  var card = document.getElementById('card');
+  var card = document.getElementById("card");
 
-  var textarea = document.createElement('textarea');
+  var textarea = document.createElement("textarea");
   textarea.value = card.innerText;
   document.body.appendChild(textarea);
   
   textarea.select();
   textarea.setSelectionRange(0, 99999);
-  document.execCommand('copy');
+  document.execCommand("copy");
   document.body.removeChild(textarea);
 
   notification();
 }
 
 function notification() {
-  var message = document.getElementById('notification-clipboard');
-  message.style.display = 'block';
+  var message = document.getElementById("notification");
+  message.style.display = "block";
   
   setTimeout(function() {
-    message.style.display = 'none';
+    message.style.display = "none";
   }, 1500);
 }

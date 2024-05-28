@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width:  1385.6px;
+  width: 1385.6px;
   height: 100vh;
 }
 
@@ -36,7 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 0px;
+  margin: 40px 0px;
   gap: 150px;
   z-index: 1;
 }
@@ -112,7 +112,8 @@ button:hover {
 .content #coffee {
   display: flex;
   align-items: center;
-  height: 590px;
+  margin-top: auto;
+  height: 540px;
 }
 
 #nav-bar, #nav-menu, #nav-content {
@@ -160,6 +161,7 @@ button:hover {
   .container {
     width: 100vw;
     height: 100vh;
+    justify-content: initial;
   }
 
   #nav-bar {
@@ -167,7 +169,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 40px 35px 30px;
+    padding: 40px 25px 30px;
     border-bottom: 1px solid var(--border);
   }
 
@@ -179,7 +181,7 @@ button:hover {
   }
 
   #nav-button.active {
-    width: 20px;
+    width: 25px;
     height: 25px;
     cursor: pointer;
     background: url(assets/menu-buguer-close.svg) no-repeat;
@@ -219,7 +221,7 @@ button:hover {
     align-items: center;
     flex-direction: column;
     max-width: 480px;
-    padding: 80px 5px;
+    margin: 70px 5px;
     gap: 5px;
   }
 

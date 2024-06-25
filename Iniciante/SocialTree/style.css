@@ -3,6 +3,7 @@
   --text-color: #BB99DD;
   --card-bg: #BB99DD;
   --name-color: #232323;
+  --switch: #495057;
 }
 
 .dark:root {
@@ -10,6 +11,7 @@
   --text-color: #BB99DD;
   --card-bg: #131313;
   --name-color: #f8f8f8;
+  --switch: #ADB5BD;
 }
 
 * {
@@ -24,6 +26,8 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   margin: 100px auto;
   padding: 10px;
@@ -78,14 +82,19 @@ body {
 }
 
 .mode-switch {
-  background-color: transparent;
+  display: flex;
+  justify-content: end;
   border: none;
-  padding: 0;
-  color: var(--name-color);
+  color: var(--switch);
+  background-color: transparent;
+}
+
+.moon {
+  padding-bottom: 15px;
 }
 
 .mode-switch.active .moon {
-  fill: var(--name-color);
+  fill: var(--switch);
 }
 
 footer {

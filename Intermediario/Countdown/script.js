@@ -1,4 +1,4 @@
-let countdown = new Date('Apr 20, 2024 06:00:00').getTime();
+let countdown = new Date('Apr 20, 2025 06:00:00').getTime();
 
 let interval = setInterval(function() {
   let dateNow = new Date().getTime();

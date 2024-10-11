@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 325px;
+  width: 278px;
   height: 100vh;
   background-color: var(--green);
 }
@@ -76,6 +76,7 @@
 .search input {
   border: none;
   outline: none;
+  width: 190px;
   background-color: var(--light-green);
 }
 
@@ -107,7 +108,7 @@
 }
 
 .user-content .title {
-  padding-right: 50px;
+  padding-right: 40px;
   font-size: 15px;
 }
 

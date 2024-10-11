@@ -26,15 +26,15 @@
           <div class="card-login">
             <label for="">E-mail</label>
             <div class="card-input">
-              <img class="locker" src="assets/mail.svg" alt="">
+              <img class="mail" src="assets/mail.svg" alt="">
               <input type="email" placeholder="Digite seu e-mail" required maxlength="40">
             </div>
             <br>
             <label for="">Senha</label>
             <div class="card-input">
-              <img class="password" src="assets/lock.svg" alt="">
-              <input type="password" placeholder="Digite sua senha" maxlength="40">
-              <img class="eye" src="assets/eye.svg" alt="">
+              <img class="locker" src="assets/lock.svg" alt="">
+              <input id="password" type="password" placeholder="Digite sua senha" maxlength="40">
+              <img class="eye" src="assets/eye.svg" alt="" onclick="togglePasswordVisibility()">
             </div>
           </div>
           <div class="baseboard">
@@ -60,5 +60,6 @@
       <img src="assets/side-image-2x.jpg" alt="">
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

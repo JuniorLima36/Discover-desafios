@@ -46,7 +46,7 @@
   color: var(--white);
 }
 
-.menu #home {
+.menu .active {
   padding-left: 5px;
   border-left: 3px solid var(--green);
 }
@@ -64,6 +64,7 @@
   padding-right: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  color: var(--white);
   background-color: var(--dark-bg);
 }
 

@@ -110,6 +110,8 @@
 
 .card-input .eye {
   cursor: pointer;
+  width: 25px;
+  height: 20px;
 }
 
 ::-ms-reveal {
@@ -121,18 +123,20 @@
   color: var(--text-base);
 }
 
-.card-input:focus-within .locker {
+.card-input:focus-within .mail {
   content: url(assets/mail-focus.svg);
 }
 
-.card-input:focus-within .password {
+.card-input:focus-within .locker {
   content: url(assets/lock-focus.svg);
 }
 
 .card-input:focus-within .eye {
-  content: url(assets/eye-closed.svg);
-  width: 25px;
-  height: 20px;
+  content: url(assets/eye-focus.svg);
+}
+
+.eye-closed {
+  content: url(assets/eye-closed.svg) !important;
 }
 
 .baseboard {
